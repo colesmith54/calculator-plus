@@ -10,7 +10,7 @@ struct DocsView: View {
                 x = value
                 b = base
                 
-                root(x, n)
+                root(x,n)
                 nth-root of x
                 """)
             }
