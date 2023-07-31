@@ -116,7 +116,7 @@ class CalculatorModel: ObservableObject {
     
     func insertOperation(_ operation: String) {
         insertCharacter(operation)
-        if operation.contains("(") && operation.contains(")") {
+        if operation.contains("(") && operation.contains(")") && !operation.contains("ans") {
             moveCursor(by: -1)
         }
         if operation.contains(",") {
