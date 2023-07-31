@@ -94,6 +94,7 @@ class CalculatorModel: ObservableObject {
         default:
             break
         }
+        updateUI()
     }
     
     func updateGraphing(value: Bool) {
@@ -122,14 +123,6 @@ class CalculatorModel: ObservableObject {
         if operation.contains(",") {
             moveCursor(by: -1)
         }
-    }
-    
-    func input(number: Int) {
-        insertCharacter("\(number)")
-    }
-    
-    func addDecimal() {
-        insertCharacter(".")
     }
     
     func deleteLastCharacter() {

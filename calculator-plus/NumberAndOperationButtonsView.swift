@@ -26,7 +26,7 @@ struct NumberAndOperationButtonsView: View {
         VStack {
             Spacer()
             ForEach(numbers, id: \.self) { number in
-                NumberButton(number: number, action: { calculator.input(number: number) })
+                NumberButton(number: number, action: { calculator.insertCharacter("\(number)") })
                 Spacer()
             }
             if lastButton {
@@ -37,7 +37,7 @@ struct NumberAndOperationButtonsView: View {
                 }
                 Spacer()
             } else if numbers.count < 4 {
-                DecimalButton(action: { calculator.addDecimal() })
+                DecimalButton(action: { calculator.insertCharacter(".")})
                 Spacer()
             }
         }
@@ -48,6 +48,8 @@ struct NumberAndOperationButtonsView: View {
             VStack {
                 Spacer()
                 ActionButton(label: "⌫", action: { calculator.deleteLastCharacter() })
+                Spacer()
+                ConstantButton(constant: "EE", action: { calculator.performOperation("E") })
                 Spacer()
                 OperationButton(operation: "(", action: { calculator.performOperation("(") })
                 Spacer()
@@ -64,6 +66,8 @@ struct NumberAndOperationButtonsView: View {
                     }
                     calculator.clearDisplay()
                 })
+                Spacer()
+                ConstantButton(constant: ",", action: { calculator.insertCharacter(",") })
                 Spacer()
                 OperationButton(operation: ")", action: { calculator.performOperation(")") })
                 Spacer()
