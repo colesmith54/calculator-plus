@@ -42,4 +42,4 @@ This project is open-source, available under the [MIT License](LICENSE).
 
 ## Contact
 
-For questions, suggestions, or any other inquiries, please [contact me](mailto:colesmith5400@gmail.com).
+[Email](mailto:colesmith5400@gmail.com)
